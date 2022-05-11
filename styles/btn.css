@@ -1,4 +1,4 @@
-/* boton del dark mode */
+
 .btn-dark-mode{
     background-color: var(--black);
     position: absolute;
@@ -11,7 +11,6 @@
     border-bottom-left-radius: 40px 40px;
     border-bottom-right-radius: 40px 40px;
 }
-/* Para eliminar y agregar || dark mode */
 .off{
     display: none;
 }

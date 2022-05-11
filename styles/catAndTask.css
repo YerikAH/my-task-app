@@ -1,11 +1,8 @@
-/* Gato de no tarea */
 .no-task{
     display: flex;
     justify-content: center;
     margin-top: 20vh;
 }
-/* cat offline , there are task */
-
 .no-taskk{
     display:none;
 }
@@ -47,7 +44,7 @@
         width:40%;
     }
 }
-/*error de mensaje*/
+/*error*/
 .list_tasks{
     margin-top: 170px;
 }

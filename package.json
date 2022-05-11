@@ -1,0 +1,16 @@
+{
+  "name": "project-one",
+  "version": "1.0.0",
+  "description": "productivity app",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Harvey_Yerik <yerik05vh@gmail.com>",
+  "license": "MIT"
+}

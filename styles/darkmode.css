@@ -1,0 +1,49 @@
+/* propiedades del darkmode */
+.dark{
+    background-color: var(--white-darkMode);
+}
+body.dark .li-a{
+    color: var(--black-darkMode)
+}
+body.dark .li-a:after{
+    background-color: var(--black-darkMode)
+}
+body.dark .add{
+    color: var(--black-darkMode);
+    border: 2px solid var(--black-darkMode);
+}
+body.dark .add::placeholder{
+    color: var(--black-darkMode);
+}
+body.dark .add:focus{
+    color: var(--black-darkMode);
+}
+body.dark .desktop-more{
+    color: var(--black-darkMode);
+}
+body.dark .btn-dark-mode{
+    background-color: var(--black-darkMode);
+}
+body.dark .catOne{
+    display:none;
+}
+body.dark .catTwo{
+    display:block;
+}
+body.dark .moon{
+    display:none;
+}
+body.dark .sun{
+    display:block;
+}
+body.dark .lista_task{
+    background-color: var(--black-darkMode);
+    color:var(--white-darkMode);
+    font-weight: 500;
+}
+body.dark .lista_task span{
+    border-left:2px solid var(--white-darkMode);
+}
+body.dark .second p{
+    color: var(--black-darkMode);
+}

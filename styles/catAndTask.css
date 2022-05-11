@@ -1,0 +1,62 @@
+/* Gato de no tarea */
+.no-task{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+/* cat offline , there are task */
+
+.no-taskk{
+    display:none;
+}
+
+/* task */
+.tasks_ul{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.lista_task{
+
+    background-color: var(--black);
+    list-style: none;
+    width: 70%;
+    display: flex;
+    border-radius: 10px;
+    padding:9px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color:var(--white);
+}
+.lista_task span{
+    border-left:2px solid var(--white);
+    padding-left: 7px;
+    font-size: 1rem;
+    font-family: 'Comic Neue', cursive;
+}
+.lista_task span:hover{
+    transition: 0.7s;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+@media (min-width:810px){
+    .lista_task{
+        width:40%;
+    }
+}
+/*error de mensaje*/
+.list_tasks{
+    margin-top: 170px;
+}
+.second{
+    margin-top: -66px;
+    margin-bottom: -80px;
+    text-align: center;
+    font-size: 0.7rem;
+}
+.second p {
+    color: var(--black);
+}

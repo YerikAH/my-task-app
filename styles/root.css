@@ -1,0 +1,29 @@
+
+/* Montserrat */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ComicNeue */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+
+:root{
+    --black: #333333;
+    --white: #ffffff;
+    --gris: #efefefaf;
+    --family : 'Montserrat', sans-serif;
+    --white-darkMode : #333333;
+    --black-darkMode : #ffffff;
+}
+html{
+    font-family: var(--family);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--white);
+}

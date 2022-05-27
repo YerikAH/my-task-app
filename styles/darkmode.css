@@ -20,9 +20,6 @@ body.dark .add:focus{
 body.dark .desktop-more{
     color: var(--black-darkMode);
 }
-body.dark .btn-dark-mode{
-    background-color: var(--black-darkMode);
-}
 body.dark .catOne{
     display:none;
 }
@@ -40,9 +37,31 @@ body.dark .lista_task{
     color:var(--white-darkMode);
     font-weight: 500;
 }
-body.dark .lista_task span{
-    border-left:2px solid var(--white-darkMode);
-}
+
 body.dark .second p{
     color: var(--black-darkMode);
+}
+body.dark .github-dark{
+    display: none;
+}
+body.dark .linkind-dark{
+    display: none;
+}
+body.dark .twitter-dark{
+    display: none;
+}
+body.dark .github-white{
+    display: block;
+}
+body.dark .linkind-white{
+    display: block;
+}
+body.dark .twitter-white{
+    display: block;
+}
+body.dark .delete-white{
+    display: block;
+}
+body.dark .delete-dark{
+    display: none;
 }

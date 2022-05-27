@@ -1,0 +1,32 @@
+.social-media{
+    display: none;
+}
+@media (min-width:810px){
+    .social-media{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 45px;
+    }
+    .github-white{
+        display: none;
+    }
+    .linkind-white{
+        display: none;
+    }
+    .twitter-white{
+        display: none;
+    }
+    .social-media span{
+        margin-left: 20px;
+    }
+    .social-media-gitHub:hover, .social-media-linkind:hover, .social-media-twitter:hover{
+        padding-top:20px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+}
+

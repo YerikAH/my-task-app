@@ -24,7 +24,7 @@ export default function add(){
     
     
     function deleteTask(e){
-        if(e.target.tagName == 'SPAN'){
+        if(e.target.tagName == 'IMG'){
             const deleteID =  parseInt(e.target.getAttribute('task-id'))
             tasks = tasks.filter(task => task.id !== deleteID)
             createHTML()
@@ -53,7 +53,7 @@ export default function add(){
             tasks.forEach(task =>{
                 const li = document.createElement('li')
                 li.className = "lista_task"
-                li.innerHTML = `${task.task} <span task-id=${task.id}>X</span>`
+                li.innerHTML = `${task.task} <span><img task-id=${task.id} class="delete-white" src="../svg/delete-dark.svg"/> <img task-id=${task.id} class="delete-dark" src="../svg/delete-white.svg"/></span>`
                 ul.appendChild(li);
             })
         }

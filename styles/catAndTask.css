@@ -14,29 +14,23 @@
     flex-direction: column;
 }
 .lista_task{
-
     background-color: var(--black);
     list-style: none;
     width: 70%;
     display: flex;
-    border-radius: 10px;
-    padding:9px;
+    border-radius: 30px;
+    padding:10px 30px;
     justify-content: space-between;
     margin-bottom: 20px;
     font-size: 0.8rem;
     font-weight: 500;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
+    align-items: center;
     color:var(--white);
 }
-.lista_task span{
-    border-left:2px solid var(--white);
-    padding-left: 7px;
-    font-size: 1rem;
-    font-family: 'Comic Neue', cursive;
-}
+
 .lista_task span:hover{
     transition: 0.7s;
-    transform: rotate(360deg);
     cursor: pointer;
 }
 @media (min-width:810px){
@@ -56,4 +50,10 @@
 }
 .second p {
     color: var(--black);
+}
+.delete-white{
+    display: none;
+}
+.delete-dark{
+    display: block;
 }

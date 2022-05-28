@@ -37,7 +37,6 @@ body.dark .lista_task{
     color:var(--white-darkMode);
     font-weight: 500;
 }
-
 body.dark .second p{
     color: var(--black-darkMode);
 }
@@ -64,4 +63,25 @@ body.dark .delete-white{
 }
 body.dark .delete-dark{
     display: none;
+}
+body.dark .no-task-text{
+    color: var(--black-darkMode);
+}
+body.dark .git-version-white{
+    display: block;
+}
+body.dark .git-version-dark{
+    display: none;
+}
+body.dark .git-version-text{
+    color: var(--black-darkMode);
+}
+body.dark .tools-user-white{
+    display: block;
+}
+body.dark .tools-user-dark{
+    display: none;
+}
+body.dark .name{
+    color: var(--black-darkMode)
 }

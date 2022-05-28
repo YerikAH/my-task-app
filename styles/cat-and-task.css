@@ -1,7 +1,8 @@
 .no-task{
-    display: flex;
+    display: grid;
     justify-content: center;
     margin-top: 20vh;
+    text-align: center;
 }
 .no-taskk{
     display:none;
@@ -56,4 +57,14 @@
 }
 .delete-dark{
     display: block;
+}
+.no-task-text{
+    margin-top: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    color:var(--black);
+    letter-spacing:2px;
+}
+.no-task img{
+    padding-left: 30px;
 }

@@ -1,0 +1,38 @@
+.tools-user{
+    display: none;
+}
+.name{
+    display: none;
+}
+@media (min-width:810px){
+    .tools-user{
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 120px;
+        height: 45px;
+        margin-right: 40px;
+        align-items: center;
+    }
+    .tools-user span{
+        padding-left: 20px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .tools-user span:hover{
+        padding-top: 20px;
+    }
+    .tools-user-white{
+        display: none;
+    }
+    .name{
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--black);
+        position: absolute;
+        right:160px;
+        margin-top: 12px;
+    }
+}

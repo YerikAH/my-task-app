@@ -8,18 +8,40 @@
     <title>myApp</title>
 </head>
 <body>
+    <div class="window"></div>
+    <div class="modal-user-name-center">
+        <div class="modal-user-name">
+            <h4 class="modal-user-name-title"  >Enter your name</h4>
+            <input class="modal-user-name-btn modal-user-name-input" id="modal-user-name-input" type="text" placeholder="my-name">
+            <span id="modal-user-name-input-error" class="modal-user-name-input-error"></span>
+            <p class="modal-user-name-text">Your name should not include more than 10 characters and there should be no spaces. Are you want a cup coffee?.</p>
+            <button class="modal-user-name-btn modal-user-name-btn-javascript" id="modal-user-name-modal">save</button>
+        </div>
+    </div>
     <div class="social-media">
         <span class="social-media-gitHub">
-            <img class="github-dark" src="../svg/github-dark.svg" alt="" srcset="">
-            <img class="github-white" src="../svg/github-white.svg" alt="" srcset="">
+            <a href="https://github.com/YerikAH?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <img class="github-dark" src="../svg/github-dark.svg" alt="GitHub" srcset="">
+            </a>
+            <a href="https://github.com/YerikAH?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <img class="github-white" src="../svg/github-white.svg" alt="GitHub" srcset="">
+            </a>
         </span>
         <span class="social-media-linkind">
-            <img class="linkind-dark" src="../svg/lin-dark.svg" alt="" srcset="">
-            <img class="linkind-white" src="../svg/lin-white.svg" alt="" srcset="">
+            <a href="https://www.linkedin.com/home?originalSubdomain=pe" target="_blank" rel="noopener noreferrer">
+                <img class="linkind-dark" src="../svg/lin-dark.svg" alt="Linkeind" srcset="">
+            </a>
+            <a href="https://www.linkedin.com/home?originalSubdomain=pe" target="_blank" rel="noopener noreferrer">
+                <img class="linkind-white" src="../svg/lin-white.svg" alt="Linkeind" srcset="">
+            </a>
         </span>
         <span class="social-media-twitter">
-            <img class="twitter-dark" src="../svg/tw-dark.svg" alt="" srcset="">
-            <img class="twitter-white" src="../svg/tw-white.svg" alt="" srcset="">
+            <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer">
+                <img class="twitter-dark" src="../svg/tw-dark.svg" alt="Twitter" srcset="">
+            </a>
+            <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer">
+                <img class="twitter-white" src="../svg/tw-white.svg" alt="Twitter" srcset="">
+            </a>
         </span>
     </div>
     <div class="btn-dark-mode" id="darkMode">
@@ -30,13 +52,28 @@
             <img src="../svg/sun.svg" alt="">
         </span>
     </div>
+    <p class="name" id="tools-user-name"></p>
+    <div class="tools-user">
+        <span class="tools-user-user" id="tools-user-user">
+            <img class="tools-user-dark" src="../svg/user-dark.svg" alt="">
+            <img class="tools-user-white" src="../svg/user-white.svg" alt="">
+        </span>
+        <span class="tools-user-setting">
+            <img class="tools-user-dark" src="../svg/settings-dark.svg" alt="">
+            <img class="tools-user-white" src="../svg/settings-white.svg" alt="">
+        </span>
+        <span class="tools-user-info">
+            <img class="tools-user-dark" src="../svg/info-dark.svg" alt="">
+            <img class="tools-user-white" src="../svg/info-white.svg" alt="">
+        </span>
+    </div>
     <nav class="nav">
         <ul class="nav-ul">
             <li class="ul-li">
                 <a href="#" class="li-a">To do list</a>
             </li>
             <li class="ul-li">
-                <a href="https://github.com/YerikAH" target="_blank" class="li-a">GitHub</a>
+                <a href="https://github.com/YerikAH" target="_blank" class="li-a">Pomodoro</a>
             </li>
         </ul>
     </nav>
@@ -51,13 +88,15 @@
             </ul>
         </div>
         <section class="seto no-task">
-            <img src="../svg/cat.svg" class="catOne" alt="Is a beatiful cat" srcset="">
-            <img src="../svg/catdark.svg" class="catTwo off" alt="Is a beatiful cat" srcset="">
+            <img src="../svg/cat-dark.svg" class="catOne" alt="Is a beatiful cat" srcset="">
+            <img src="../svg/cat-white.svg" class="catTwo off" alt="Is a beatiful cat" srcset="">
+            <p class="no-task-text">You don't have tasks to do yet</p>
         </section> 
     </main>
     <footer class="version">
-        <span><img src="" alt="" srcset=""></span>
-        <p></p>
+        <span class="git-version-dark"><img src="../svg/git-dark.svg" alt="" srcset=""></span>
+        <span class="git-version-white"><img src="../svg/git-white.svg" alt="" srcset=""></span>
+        <p class="git-version-text">Version 1.0.1</p>
     </footer>
     <script src="../src/index.js" type="module"></script>
 </body>

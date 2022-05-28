@@ -20,12 +20,12 @@
         display: none;
     }
     .social-media span{
-        margin-left: 20px;
-    }
-    .social-media-gitHub:hover, .social-media-linkind:hover, .social-media-twitter:hover{
-        padding-top:20px;
+        padding-left: 20px;
         transition: 0.5s;
         cursor: pointer;
+    }
+    .social-media span:hover{
+        padding-top:20px;
     }
 
 }

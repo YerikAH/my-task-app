@@ -1,0 +1,96 @@
+.modal-user-name-center{
+    display: none;
+}
+@media (min-width:810px){
+    .window{
+        width: 100vw;
+        height: 100vh;
+        background-color:rgba(29, 29, 29, 0.633) ;
+        overflow: hidden;
+        position: absolute;
+        z-index: 900;
+        transition: 0.5s;
+        opacity: 1;
+        left: -100vw;
+    }
+    .modal-user-name-center{
+        width: 100vw;
+        height: 100vh;
+        display:grid;
+        place-items: center;
+        position: absolute;
+        top: -100vw;
+        transition: 1s;
+        display: static;
+    }
+    .modal-user-name{
+        width: 25%;
+        height: auto;
+        background-color: var(--white);
+        border-radius: 30px;
+        position: absolute;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding:2.2% 2.2%;
+        justify-content: center;
+    }
+    .modal-user-name-btn{
+        margin: 15px 0px;
+        outline: none;
+        border: none;
+        background: var(--gris);
+        border-radius: 30px;
+        padding: 7px;
+        font-family: var(--family);
+        color:var(--black);
+        font-size: 0.8rem;
+    }
+    .modal-user-name-text{
+        font-size: 0.625rem;
+        color:var(--black);
+    }
+    .modal-user-name-input{
+        padding-left: 15px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .modal-user-name-btn-javascript{
+        margin-bottom: 0;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .modal-user-name-btn-javascript:hover{
+        background-color: var(--black);
+        color: var(--white);
+        transition: 0.5s;
+
+    }
+    .modal-user-name-title{
+        font-size: 1.225rem;
+        color: var(--black);
+        margin:5px 0px;
+    }
+    .modal-user-name-input-error{
+        color:rgb(255, 72, 124);
+        font-size: 0.625rem;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    @media(min-width:1800px){
+        .modal-user-name-title{
+            font-size: 1.5rem;
+        }
+        .modal-user-name-text{
+            font-size: 0.9rem;
+            color:var(--black);
+        }
+        .modal-user-name-btn{
+            font-size: 1rem;
+        }
+    }
+    
+}
+
+
+

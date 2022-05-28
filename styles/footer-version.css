@@ -1,0 +1,27 @@
+.version{
+    display: none;
+}
+
+@media(min-width:810px){
+    .version{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        margin: 0px 20px 20px 0px; 
+    }
+    .git-version-white{
+        display: none;
+    }
+    .version span {
+        margin-right: 5px;
+    }
+    .git-version-text{
+        color: var(--black);
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+}

@@ -58,7 +58,7 @@ export default function add(){
             })
         }
         if (nose.childElementCount  == 0){
-            yesTask.style.setProperty("display","flex")
+            yesTask.style.setProperty("display","grid")
             
         }else{
             yesTask.style.setProperty("display","none")

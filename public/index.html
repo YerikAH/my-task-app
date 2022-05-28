@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="window"></div>
+    <div class="window-modal-setting"></div>
     <div class="modal-user-name-center">
         <div class="modal-user-name">
             <h4 class="modal-user-name-title"  >Enter your name</h4>
@@ -16,6 +17,24 @@
             <span id="modal-user-name-input-error" class="modal-user-name-input-error"></span>
             <p class="modal-user-name-text">Your name should not include more than 10 characters and there should be no spaces. Are you want a cup coffee?.</p>
             <button class="modal-user-name-btn modal-user-name-btn-javascript" id="modal-user-name-modal">save</button>
+        </div>
+    </div>
+    <div class="modal-setting-center">
+        <div class="modal-setting">
+            <div class="modal-setting-title">
+                <h4 >Settings</h4>
+                <img src="../svg/modal-title-settings.svg" alt="" srcset="">
+            </div>
+            <p class="modal-setting-subtitle">font family</p>
+            <div class="modal-setting-letter">
+                <button class="itim">Itim</button>
+                <button class="lato">Lato</button>
+                <button class="firacode">FiraCode</button>
+                <button class="montserrat">Montserrat</button>
+                <button class="comicneue">Comic Neue</button>
+                <button class="roboto">Roboto</button>
+            </div>
+            <p class="modal-setting-footer">Soon there will be more options,<br/> we are working on it</p>
         </div>
     </div>
     <div class="social-media">
@@ -58,7 +77,7 @@
             <img class="tools-user-dark" src="../svg/user-dark.svg" alt="">
             <img class="tools-user-white" src="../svg/user-white.svg" alt="">
         </span>
-        <span class="tools-user-setting">
+        <span class="tools-user-setting" id="tools-user-setting">
             <img class="tools-user-dark" src="../svg/settings-dark.svg" alt="">
             <img class="tools-user-white" src="../svg/settings-white.svg" alt="">
         </span>

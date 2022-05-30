@@ -1,6 +1,6 @@
 export default function settingsModal(){
     const $settings=document.getElementById("tools-user-setting")
-    const $window = document.querySelector(".window-modal-setting")
+    const $window = document.querySelector(".window")
     const $modalSettings = document.querySelector(".modal-setting-center")
     const montserrat = document.querySelector(".montserrat")
     const itim = document.querySelector(".itim")
@@ -11,44 +11,44 @@ export default function settingsModal(){
     const roboto = document.querySelector(".roboto")
     const style = document.documentElement.style
     $settings.addEventListener('click',e=>{
-        $window.style.setProperty("right","0")
-        $modalSettings.style.setProperty("left","0")
+        $window.style.setProperty("display","block")
+        $modalSettings.style.setProperty("top","0")
     })
     document.addEventListener('click',e=>{
         if (e.target == montserrat){
             style.setProperty("--family","Montserrat")
             localStorage.setItem('family','montserrat')
-            $window.style.setProperty("right","-100vw")
-            $modalSettings.style.setProperty("left","-100vw")
+            $window.style.setProperty("display","none")
+            $modalSettings.style.setProperty("top","-100vw")
         }else if (e.target == itim){
             style.setProperty("--family","Itim")
             localStorage.setItem('family','itim')
-            $window.style.setProperty("right","-100vw")
-            $modalSettings.style.setProperty("left","-100vw")
+            $window.style.setProperty("display","none")
+            $modalSettings.style.setProperty("top","-100vw")
         }
         else if (e.target == firacode){
             style.setProperty("--family","Fira Code")
             localStorage.setItem('family','firacode')
-            $window.style.setProperty("right","-100vw")
-            $modalSettings.style.setProperty("left","-100vw")
+            $window.style.setProperty("display","none")
+            $modalSettings.style.setProperty("top","-100vw")
         }
         else if (e.target == lato){
             style.setProperty("--family","Lato")
             localStorage.setItem('family','lato')
-            $window.style.setProperty("right","-100vw")
-            $modalSettings.style.setProperty("left","-100vw")
+            $window.style.setProperty("display","none")
+            $modalSettings.style.setProperty("top","-100vw")
         }
         else if (e.target == comicsans){
             style.setProperty("--family","Comic Neue")
             localStorage.setItem('family','comic')
-            $window.style.setProperty("right","-100vw")
-            $modalSettings.style.setProperty("left","-100vw")
+            $window.style.setProperty("display","none")
+            $modalSettings.style.setProperty("top","-100vw")
         }
         else if (e.target == roboto){
             style.setProperty("--family","Roboto")
             localStorage.setItem('family','roboto')
-            $window.style.setProperty("right","-100vw")
-            $modalSettings.style.setProperty("left","-100vw")
+            $window.style.setProperty("display","none")
+            $modalSettings.style.setProperty("top","-100vw")
         }
     })
     document.addEventListener('DOMContentLoaded',e=>{

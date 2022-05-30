@@ -6,9 +6,8 @@ export default function nameUser(){
     const $input = document.getElementById("modal-user-name-input")
     const $alertError = document.getElementById("modal-user-name-input-error")
     const $name = document.getElementById("tools-user-name")
-    const $space = document.querySelector(".tools-user")
     $user.addEventListener('click',e=>{
-        $window.style.setProperty("left","0")
+        $window.style.setProperty("display","block")
         $modal.style.setProperty("top","0")
     })
     $save.addEventListener('click',e=>{
@@ -30,7 +29,7 @@ export default function nameUser(){
             }else{
                 localStorage.setItem('name',`${$input.value}`)
             }
-            $window.style.setProperty("left","-100vw")
+            $window.style.setProperty("display","none")
             $modal.style.setProperty("top","-100vw")
         }
     })

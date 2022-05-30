@@ -11,7 +11,7 @@
         z-index: 900;
         transition: 0.5s;
         opacity: 1;
-        left: -100vw;
+        display:none;
     }
     .modal-user-name-center{
         width: 100vw;

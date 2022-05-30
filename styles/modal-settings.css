@@ -2,15 +2,7 @@
     display: none;
 }
 @media (min-width:810px){
-    .window-modal-setting{
-        width: 100vw;
-        height: 100vh;
-        background-color:rgba(29, 29, 29, 0.633) ;
-        position: absolute;
-        z-index: 1100;
-        transition: 0.5s;
-        right: -100vw;
-    }
+
     .modal-setting-center{
         width: 100vw;
         height: 100vh;
@@ -20,7 +12,7 @@
         transition: 1s;
         display: static;
         z-index: 1500;
-        left: -100vw;
+        top: -100vw;
     }
     .modal-setting{
         width: auto;
@@ -59,16 +51,16 @@
     .modal-setting-letter button{
         border: none;
         outline: none;
-        background-color: var(--black);
-        color: var(--white);
+        background: var(--gris);
+        color: var(--black);
         border-radius: 5px;
         padding: 5px;
         width: 120px;
         cursor: pointer;
     }
     .modal-setting-letter button:hover{
-        background-color: var(--white);
-        color: var(--black);
+        background-color: var(--black);
+        color: var(--white);
         transition: 0.5s;
     }
     .modal-setting-subtitle{
@@ -81,6 +73,7 @@
         margin-top: 30px;
         font-size: 0.7rem;
         text-align: center;
+        color: var(--black);
     }
     /* btn */
     .itim{

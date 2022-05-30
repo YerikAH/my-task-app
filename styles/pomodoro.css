@@ -1,0 +1,68 @@
+.break-pomo{
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  font-size: 5rem;
+}
+/*copy the work pomo in break pomo*/
+.pomo-center{
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+}
+
+.circle-pomo{
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 310px;
+  border: 5px solid var(--black);
+  border-radius: 50%;
+}
+.work-pomo{
+  display: flex;
+  font-size: 5rem;
+  
+}
+.config-pomo{
+  display: grid;
+}
+.config-pomo button{
+  padding: 10px 40px;
+  outline: none;
+  font-family: var(--family);
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid var(--black);
+  margin: 10px;
+  color: var(--black);
+  cursor: pointer;
+}
+.config-pomo button:hover{
+  background-color: var(--black);
+  color:var(--white);
+  transition: 0.5s;
+}
+@media (min-width:350px){
+  .circle-pomo{
+    width: 360px;
+    height: 360px;
+  }
+}
+
+.cycles-pomo{
+  display: flex;
+  justify-content: center;
+}
+
+.cycle-pomo-pomo{
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--black);
+  margin-left: 5px;
+}

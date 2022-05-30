@@ -85,3 +85,41 @@ body.dark .tools-user-dark{
 body.dark .name{
     color: var(--black-darkMode)
 }
+
+/*Pomodoro app dark-mode*/
+
+body.dark .circle-pomo{
+    color:var(--black-darkMode);
+    border:5px solid var(--black-darkMode)
+}
+body.dark .config-pomo button{
+    border: 2px solid var(--black-darkMode);
+    color: var(--black-darkMode);
+}
+body.dark .config-pomo button:hover{
+    background-color: var(--black-darkMode);
+    color: var(--white-darkMode);
+}
+
+/*soon*/
+
+body.dark .soon-pomodoro{
+    background-color: var(--white-darkMode);
+}
+body.dark .soon-pomodoro h1{
+    color: var(--black-darkMode)
+}
+body.dark .soon-pomodoro button{
+    border:2px solid var(--black-darkMode);
+    color: var(--black-darkMode)
+}
+body.dark .soon-pomodoro button:hover{
+    background-color: var(--black-darkMode);
+    color: var(--white-darkMode);
+}
+body.dark .logo-white{
+    display: block;
+}
+body.dark .logo-black{
+    display: none;
+}

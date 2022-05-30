@@ -1,0 +1,55 @@
+.soon-pomodoro{
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background-color: var(--white);
+  display: grid;
+  position: absolute;
+  place-items: center;
+  z-index: 2000;
+  text-align: center;
+  padding:60px 0px;
+  top: -100vw;
+  transition: 1s;
+}
+.soon-pomodoro h1{
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--family);
+  color:var(--black);
+  padding: 0px 20px;
+}
+.soon-pomodoro button{
+  border: 2px solid var(--black);
+  color: var(--black);
+  background-color: transparent;
+  font-family: var(--family);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 10px 50px;
+  outline: none;
+}
+.soon-pomodoro button:hover{
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.5s;
+  cursor: pointer;
+}
+@media (min-width:610px){
+  .soon-pomodoro h1{
+    font-size: 3rem;
+  }
+}
+@media (min-width:810px){
+  .soon-pomodoro h1{
+    font-size: 3rem;
+    padding: 0px 100px;
+  }
+}
+.logo-black{
+  display:block;
+}
+.logo-white{
+  display:none;
+}

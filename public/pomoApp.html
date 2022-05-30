@@ -8,6 +8,12 @@
     <title>myApp</title>
 </head>
 <body>
+    <div class="soon-pomodoro">
+        <h1>I'm working on it soon there will be more options .  .  .</h1>
+        <img class="logo-white" src="../svg/logo-white.svg" alt="A eich" srcset="">
+        <img class="logo-black" src="../svg/logo-black.svg" alt="A eich" srcset="">
+        <button class="bye-cat">exit</button>
+    </div>
     <div class="window"></div>
     <div class="info-center">
         <div class="info">
@@ -98,31 +104,36 @@
                 <a href="index.html" class="li-a">To do list</a>
             </li>
             <li class="ul-li">
-                <a href="pomoApp.html"  class="li-a">Pomodoro</a>
+                <a href="pomoApp.html" class="li-a">Pomodoro</a>
             </li>
         </ul>
     </nav>
-    <main>
-        <section class="first">
-            <span class="desktop-more">+</span>
-            <input class="add" placeholder="Add the task . . .">
-        </section>
-        <div class="second"></div>
-        <div class="list_tasks">
-            <ul class="tasks_ul">
-            </ul>
+    <main class="pomo-center">
+        <div class="circle-pomo">
+            <div class="work-pomo">
+                <p class="work-minute" id="min">25</p>
+                <p> : </p>
+                <p class="work-second" id="sec">00</p>
+            </div>
+            <div class="break-pomo">
+                <p class="break-minute" id="min_b">4</p>
+                <p>:</p>
+                <p class="break-second" id="sec_b">59</p>
+            </div>
         </div>
-        <section class="seto no-task">
-            <img src="../svg/cat-dark.svg" class="catOne" alt="Is a beatiful cat" srcset="">
-            <img src="../svg/cat-white.svg" class="catTwo off" alt="Is a beatiful cat" srcset="">
-            <p class="no-task-text">You don't have tasks to do yet</p>
-        </section> 
+        <div class="cycles-pomo">
+        </div>
+        <div class="config-pomo">
+            <button class="start-pomo" id="start">Get start</button>
+            <button class="Setting-pomo">Setting</button>
+        </div>
     </main>
+
     <footer class="version">
         <span class="git-version-dark"><img src="../svg/git-dark.svg" alt="" srcset=""></span>
         <span class="git-version-white"><img src="../svg/git-white.svg" alt="" srcset=""></span>
         <p class="git-version-text">Version 1.0.1</p>
     </footer>
-    <script src="../src/index.js" type="module"></script>
+    <script src="../src/pomoIndex.js" type="module"></script>
 </body>
 </html>

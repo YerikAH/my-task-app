@@ -1,0 +1,33 @@
+.social-media path {
+  fill: var(--black);
+}
+.tools-user path {
+  fill: var(--black);
+}
+.moon path {
+  fill: var(--black);
+}
+.sun path {
+  fill: var(--white);
+}
+.git-version-dark {
+  fill: var(--black);
+}
+.partO {
+  fill: var(--black);
+}
+.partT {
+  fill: var(--black);
+}
+.partTT {
+  stroke: var(--black);
+}
+.logo-foot-svg {
+  fill: var(--white);
+}
+.mobile-setting {
+  fill: var(--black);
+}
+.delete-task path {
+  fill: var(--white);
+}

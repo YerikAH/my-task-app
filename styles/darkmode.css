@@ -1,125 +1,205 @@
-.dark{
-    background-color: var(--white-darkMode);
+.dark {
+  background-color: var(--black);
 }
-body.dark .li-a{
-    color: var(--black-darkMode)
+body.dark .li-a {
+  color: var(--white);
 }
-body.dark .li-a:after{
-    background-color: var(--black-darkMode)
+body.dark .li-a:after {
+  background-color: var(--white);
 }
-body.dark .add{
-    color: var(--black-darkMode);
-    border: 2px solid var(--black-darkMode);
+body.dark .add {
+  color: var(--white);
+  border: 2px solid var(--white);
 }
-body.dark .add::placeholder{
-    color: var(--black-darkMode);
+body.dark .add::placeholder {
+  color: var(--white);
 }
-body.dark .add:focus{
-    color: var(--black-darkMode);
+body.dark .add:focus {
+  color: var(--white);
 }
-body.dark .desktop-more{
-    color: var(--black-darkMode);
+body.dark .desktop-more {
+  color: var(--white);
 }
-body.dark .catOne{
-    display:none;
+body.dark .partO + .partT {
+  fill: var(--white);
 }
-body.dark .catTwo{
-    display:block;
+body.dark .partTT {
+  stroke: var(--white);
 }
-body.dark .moon{
-    display:none;
+body.dark .moon {
+  display: none;
 }
-body.dark .sun{
-    display:block;
+body.dark .sun {
+  display: block;
 }
-body.dark .lista_task{
-    background-color: var(--black-darkMode);
-    color:var(--white-darkMode);
-    font-weight: 500;
+body.dark .lista_task {
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 500;
 }
-body.dark .second p{
-    color: var(--black-darkMode);
+body.dark .second p {
+  color: var(--white);
 }
-body.dark .github-dark{
-    display: none;
+body.dark .github-dark {
+  fill: var(--white);
 }
-body.dark .linkind-dark{
-    display: none;
+body.dark .linkind-dark {
+  fill: var(--white);
 }
-body.dark .twitter-dark{
-    display: none;
+body.dark .twitter-dark {
+  fill: var(--white);
 }
-body.dark .github-white{
-    display: block;
+
+body.dark .no-task-text {
+  color: var(--white);
 }
-body.dark .linkind-white{
-    display: block;
+body.dark .git-version-dark {
+  fill: var(--white);
 }
-body.dark .twitter-white{
-    display: block;
+body.dark .git-version-text {
+  color: var(--white);
 }
-body.dark .delete-white{
-    display: block;
+body.dark .tools-user-white {
+  display: block;
 }
-body.dark .delete-dark{
-    display: none;
+body.dark .tools-user-dark {
+  fill: var(--white);
 }
-body.dark .no-task-text{
-    color: var(--black-darkMode);
-}
-body.dark .git-version-white{
-    display: block;
-}
-body.dark .git-version-dark{
-    display: none;
-}
-body.dark .git-version-text{
-    color: var(--black-darkMode);
-}
-body.dark .tools-user-white{
-    display: block;
-}
-body.dark .tools-user-dark{
-    display: none;
-}
-body.dark .name{
-    color: var(--black-darkMode)
+body.dark .name {
+  color: var(--white);
 }
 
 /*Pomodoro app dark-mode*/
 
-body.dark .circle-pomo{
-    color:var(--black-darkMode);
-    border:5px solid var(--black-darkMode)
+body.dark .circle-pomo {
+  color: var(--white);
 }
-body.dark .config-pomo button{
-    border: 2px solid var(--black-darkMode);
-    color: var(--black-darkMode);
-}
-body.dark .config-pomo button:hover{
-    background-color: var(--black-darkMode);
-    color: var(--white-darkMode);
+body.dark .config-pomo button {
+  background-color: var(--very-black);
+  color: var(--white);
 }
 
 /*soon*/
 
-body.dark .soon-pomodoro{
-    background-color: var(--white-darkMode);
+body.dark .soon-pomodoro {
+  background-color: var(--black);
 }
-body.dark .soon-pomodoro h1{
-    color: var(--black-darkMode)
+body.dark .soon-pomodoro h1 {
+  color: var(--white);
 }
-body.dark .soon-pomodoro button{
-    border:2px solid var(--black-darkMode);
-    color: var(--black-darkMode)
+body.dark .soon-pomodoro button {
+  border: 2px solid var(--white);
+  color: var(--white);
 }
-body.dark .soon-pomodoro button:hover{
-    background-color: var(--black-darkMode);
-    color: var(--white-darkMode);
+body.dark .soon-pomodoro button:hover {
+  background-color: var(--white);
+  color: var(--black);
 }
-body.dark .logo-white{
-    display: block;
+body.dark .logo-white {
+  display: block;
 }
-body.dark .logo-black{
-    display: none;
+body.dark .logo-black {
+  display: none;
+}
+body.dark .logo-foot-svg {
+  fill: var(--black);
+}
+body.dark .logo-footer {
+  color: var(--white);
+}
+body.dark .logo-footer span {
+  border-radius: 255px;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  background-color: var(--white);
+  margin-right: 10px;
+}
+body.dark .mobile-setting {
+  fill: var(--white);
+}
+body.dark .menu-all-mobile {
+  background-color: var(--black);
+}
+body.dark .menu-title-mobile h4 {
+  color: var(--white);
+}
+body.dark .grid-option-seccion-one span {
+  color: var(--white);
+}
+body.dark .grid-child-info span {
+  color: var(--white);
+}
+body.dark .grid-child-name > span {
+  color: var(--white);
+}
+body.dark .grid-child-name > input[type="text"] {
+  background: var(--very-black);
+  color: var(--gris);
+}
+body.dark .grid-child-name > input[type="submit"] {
+  background: var(--very-black);
+  color: var(--gris);
+}
+body.dark .logo-foot-svg-mobile {
+  fill: var(--black);
+}
+body.dark .logo-footer-mobile > span {
+  background-color: var(--white);
+}
+body.dark .logo-footer-mobile {
+  color: var(--white);
+}
+body.dark .loading {
+  background: var(--black);
+}
+body.dark .lds-roller div:after {
+  background: var(--white);
+}
+body.dark .loading p {
+  color: var(--white);
+}
+body.dark .info {
+  background-color: var(--black);
+}
+body.dark .info-p {
+  color: var(--white);
+}
+body.dark .info-btn {
+  background-color: var(--very-black);
+  color: var(--white);
+}
+body.dark .info-title {
+  color: var(--gris);
+}
+body.dark .modal-user-name {
+  background-color: var(--black);
+}
+body.dark .modal-user-name-title {
+  color: var(--white);
+}
+body.dark .modal-user-name-text {
+  color: var(--white);
+}
+body.dark .modal-user-name-btn {
+  background: var(--very-black);
+  color: var(--white);
+}
+body.dark .modal-user-name-input {
+  background: var(--very-black);
+  color: var(--white);
+}
+body.dark .delete-task > path {
+  fill: var(--black);
+}
+body.dark .bg-circle-big {
+  background-color: var(--very-black);
+}
+body.dark .circle-pomo {
+  color: var(--white);
+  background: var(--very-black);
+}
+body.dark .cycle-pomo-pomo {
+  border: 1px solid var(--white);
 }

@@ -8,7 +8,9 @@
 @import url("footer-version.css");
 @import url("btn-tools.css");
 @import url("modal-name-user.css");
-@import url("modal-settings.css");
 @import url("modal-info.css");
 @import url("pomodoro.css");
-@import url("soon.css")
+@import url("soon.css");
+@import url("style-svg.css");
+@import url("menu-mobile.css");
+@import url("loader.css");

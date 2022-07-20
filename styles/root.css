@@ -1,48 +1,54 @@
-
 /* Montserrat */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700&display=swap");
 
 /* ComicNeue */
 
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap");
 
 /* Fira Code */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 /* Itim */
 
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 
 /* Lato */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 /* Roboto */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-
-:root{
-    --black: #333333;
-    --white: #ffffff;
-    --gris: #F0F0F0;
-    --family : 'Montserrat', sans-serif;
-    --white-darkMode : #333333;
-    --black-darkMode : #ffffff;
-    --gris-look:#747474;
+:root {
+  --black: #333333;
+  --white: #ffffff;
+  --gris: #f0f0f0;
+  --family: "Montserrat", sans-serif;
+  --white-darkMode: #333333;
+  --black-darkMode: #ffffff;
+  --gris-look: #747474;
+  --very-black: #262626;
+  --error: #ff4545;
 }
-html{
-    font-family: var(--family);
-    overflow-x: hidden;
+html {
+  font-family: var(--family);
+  overflow-x: hidden;
 }
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: var(--white);
+body {
+  background-color: var(--white);
+}
+input[type="submit"],
+a,
+button {
+  cursor: pointer;
+  outline: none;
 }

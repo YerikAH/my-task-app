@@ -1,4 +1,8 @@
-.btn-dark-mode{
+.btn-dark-mode {
+  display: none;
+}
+@media (min-width: 810px) {
+  .btn-dark-mode {
     position: absolute;
     right: 0;
     width: 45px;
@@ -7,7 +11,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-.off{
+  }
+  .off {
     display: none;
+  }
 }

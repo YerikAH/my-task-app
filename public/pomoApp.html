@@ -1,139 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>myApp</title>
-</head>
-<body>
-    <div class="soon-pomodoro">
-        <h1>I'm working on it soon there will be more options .  .  .</h1>
-        <img class="logo-white" src="../svg/logo-white.svg" alt="A eich" srcset="">
-        <img class="logo-black" src="../svg/logo-black.svg" alt="A eich" srcset="">
-        <button class="bye-cat">exit</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title id="titlePomo">my-task-app</title>
+  </head>
+  <body>
+    <div class="loading" id="changeLoader">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>Loading</p>
+    </div>
+
+    <div class="menu-all-mobile" id="menuAll">
+      <div class="quit-menu-mobile" id="exitHamSettings">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.799805 0.78125L10.7998 10.7049M0.799805 10.7049L10.7998 0.78125"
+            stroke="#747474"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+      <div class="menu-title-mobile">
+        <h4>
+          Setting for Pomodoro
+          <span id="nameMobilePost" class="name-mobile-span"></span>
+        </h4>
+      </div>
+      <p class="sub-title-mobile special-font-mobile">time</p>
+      <div class="font-change-mobile">
+        <button class="button-time-pomodoro" id="six">60/10</button>
+        <button class="button-time-pomodoro" id="three">30/5</button>
+        <button class="button-time-pomodoro" id="five">5/5</button>
+        <button class="button-time-pomodoro" id="twenty">25/5</button>
+        <button class="button-time-pomodoro" id="fifty">50/10</button>
+        <button class="button-time-pomodoro" id="fourty">40/10</button>
+      </div>
+
+      <div class="menu-title-mobile">
+        <h4>Settings</h4>
+      </div>
+      <p class="sub-title-mobile special-font-mobile">font family</p>
+      <div class="font-change-mobile">
+        <button class="itim">Itim</button>
+        <button class="lato">Lato</button>
+        <button class="firacode">FiraCode</button>
+        <button class="montserrat">Montserrat</button>
+        <button class="comicneue">Comic Neue</button>
+        <button class="roboto">Roboto</button>
+      </div>
+      <div class="grid-option dark-mode-minimalist" id="MinimalistDark">
+        <div class="grid-option-seccion-one">
+          <p class="sub-title-mobile">dark mode</p>
+          <span>
+            Special if you love the color dark, only two colors, where the black
+            is first.
+          </span>
+        </div>
+        <div class="grid-option-seccion-two">
+          <button id="darkmodeMobileOff">off</button>
+          <button id="darkmodeMobileOn">on</button>
+        </div>
+      </div>
+      <div class="grid-option">
+        <div class="grid-option-seccion-one">
+          <p class="sub-title-mobile">minimalist mode</p>
+          <span>
+            The minimalist mode tries to eliminate most of the details of the
+            application.
+          </span>
+        </div>
+        <div class="grid-option-seccion-two">
+          <button id="minimaOff">off</button>
+          <button id="minimaOn">on</button>
+        </div>
+      </div>
+      <div class="grid-option">
+        <div class="grid-option-seccion-one">
+          <p class="sub-title-mobile">hight contrast</p>
+          <span>
+            The colors is bored don'r worry, color more shodow and more light.
+          </span>
+        </div>
+        <div class="grid-option-seccion-two">
+          <button id="contrastOff">off</button>
+          <button id="contrastOn">on</button>
+        </div>
+      </div>
+      <div class="grid-child-info" id="InfoChildGrid">
+        <p class="sub-title-mobile">info</p>
+        <span>
+          Hello, my name is Harvey, I am the creator of this mini productivity
+          application, if you want to make a change that will improve the
+          application, send me a pull request :)
+        </span>
+      </div>
+      <div class="grid-child-name" id="NameChildGrid">
+        <p class="sub-title-mobile">enter your name</p>
+        <input type="text" placeholder="my-name" id="nameMobilUser" />
+        <input type="submit" value="save" id="nameMobilSubmit" />
+        <span id="nameMobilError" class="error-Mobil"></span>
+        <span>
+          Your name should not include more than 10 characters and there should
+          be no spaces. Are you want a cup coffee?.
+        </span>
+      </div>
+      <div class="grid-child-footer" id="minalistPositionFoot">
+        <div class="logo-footer-mobile">
+          <span>
+            <svg
+              width="12"
+              height="11"
+              viewBox="0 0 12 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="logo-foot-svg-mobile"
+                d="M3.2721 0.0827219C3.24597 0.0565019 3.21492 0.0356977 3.18074 0.0215024C3.14655 0.00730717 3.1099 0 3.07288 0C3.03586 0 2.99921 0.00730717 2.96503 0.0215024C2.93084 0.0356977 2.89979 0.0565019 2.87366 0.0827219L1.38116 1.56655L0.849129 1.04811C0.823 1.02189 0.791952 1.00109 0.757765 0.986894C0.723579 0.972699 0.686926 0.965392 0.64991 0.965392C0.612893 0.965392 0.576241 0.972699 0.542055 0.986894C0.507868 1.00109 0.47682 1.02189 0.450691 1.04811L0.0827219 1.41655C0.0565019 1.44268 0.0356977 1.47373 0.0215024 1.50792C0.00730716 1.5421 0 1.57875 0 1.61577C0 1.65279 0.00730716 1.68944 0.0215024 1.72363C0.0356977 1.75781 0.0565019 1.78886 0.0827219 1.81499L1.19811 2.92593C1.25379 2.97885 1.32767 3.00836 1.40448 3.00836C1.4813 3.00836 1.55517 2.97885 1.61085 2.92593L1.97624 2.55983L3.66843 0.867879C3.72115 0.815113 3.75094 0.743685 3.75134 0.669093C3.75173 0.594501 3.7227 0.522762 3.67054 0.469441L3.2721 0.0827219ZM3.2721 3.81374C3.24597 3.78752 3.21492 3.76672 3.18074 3.75252C3.14655 3.73833 3.1099 3.73102 3.07288 3.73102C3.03586 3.73102 2.99921 3.73833 2.96503 3.75252C2.93084 3.76672 2.89979 3.78752 2.87366 3.81374L1.38116 5.30718L0.849129 4.78921C0.823 4.76299 0.791952 4.74219 0.757765 4.72799C0.723579 4.7138 0.686926 4.70649 0.64991 4.70649C0.612893 4.70649 0.576241 4.7138 0.542055 4.72799C0.507868 4.74219 0.47682 4.76299 0.450691 4.78921L0.0827219 5.15695C0.0565019 5.18307 0.0356977 5.21412 0.0215024 5.24831C0.00730716 5.2825 0 5.31915 0 5.35616C0 5.39318 0.00730716 5.42983 0.0215024 5.46402C0.0356977 5.49821 0.0565019 5.52925 0.0827219 5.55538L1.1953 6.66867C1.25094 6.72157 1.32478 6.75108 1.40155 6.75108C1.47833 6.75108 1.55217 6.72157 1.6078 6.66867L1.97577 6.30093L3.66796 4.60827C3.72048 4.55588 3.75017 4.48485 3.75057 4.41066C3.75096 4.33647 3.72203 4.26513 3.67007 4.21218L3.2721 3.81374ZM1.49999 7.8757C0.879129 7.8757 0.36116 8.37961 0.36116 9.0007C0.36116 9.62179 0.879598 10.1257 1.49999 10.1257C1.79836 10.1257 2.08451 10.0072 2.29549 9.7962C2.50646 9.58522 2.62499 9.29907 2.62499 9.0007C2.62499 8.70233 2.50646 8.41618 2.29549 8.2052C2.08451 7.99422 1.79836 7.8757 1.49999 7.8757ZM11.625 8.2507H4.87499C4.77554 8.2507 4.68015 8.29021 4.60983 8.36053C4.5395 8.43086 4.49999 8.52624 4.49999 8.6257V9.3757C4.49999 9.47516 4.5395 9.57054 4.60983 9.64087C4.68015 9.71119 4.77554 9.7507 4.87499 9.7507H11.625C11.7245 9.7507 11.8198 9.71119 11.8902 9.64087C11.9605 9.57054 12 9.47516 12 9.3757V8.6257C12 8.52624 11.9605 8.43086 11.8902 8.36053C11.8198 8.29021 11.7245 8.2507 11.625 8.2507ZM11.625 0.750691H4.87499C4.77554 0.750691 4.68015 0.7902 4.60983 0.860527C4.5395 0.930853 4.49999 1.02624 4.49999 1.12569V1.87569C4.49999 1.97515 4.5395 2.07053 4.60983 2.14086C4.68015 2.21118 4.77554 2.25069 4.87499 2.25069H11.625C11.7245 2.25069 11.8198 2.21118 11.8902 2.14086C11.9605 2.07053 12 1.97515 12 1.87569V1.12569C12 1.02624 11.9605 0.930853 11.8902 0.860527C11.8198 0.7902 11.7245 0.750691 11.625 0.750691ZM11.625 4.5007H4.87499C4.77554 4.5007 4.68015 4.5402 4.60983 4.61053C4.5395 4.68086 4.49999 4.77624 4.49999 4.8757V5.6257C4.49999 5.72515 4.5395 5.82054 4.60983 5.89086C4.68015 5.96119 4.77554 6.0007 4.87499 6.0007H11.625C11.7245 6.0007 11.8198 5.96119 11.8902 5.89086C11.9605 5.82054 12 5.72515 12 5.6257V4.8757C12 4.77624 11.9605 4.68086 11.8902 4.61053C11.8198 4.5402 11.7245 4.5007 11.625 4.5007Z"
+                fill="#F9F9F9"
+              />
+            </svg>
+          </span>
+          my-task-app
+        </div>
+        <div class="social-media-mobile">
+          <span class="social-media-gitHub">
+            <a
+              href="https://github.com/YerikAH?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="github-dark"
+                  d="M6.02056 14.4936C6.02056 14.568 5.9371 14.6276 5.83185 14.6276C5.7121 14.6387 5.62863 14.5792 5.62863 14.4936C5.62863 14.4191 5.7121 14.3596 5.81734 14.3596C5.92621 14.3484 6.02056 14.408 6.02056 14.4936ZM4.89194 14.3261C4.86653 14.4005 4.93911 14.4861 5.04798 14.5085C5.14234 14.5457 5.25121 14.5085 5.27298 14.434C5.29476 14.3596 5.22581 14.274 5.11694 14.2405C5.02258 14.2144 4.91734 14.2516 4.89194 14.3261ZM6.49597 14.2628C6.39073 14.2889 6.31814 14.3596 6.32903 14.4452C6.33992 14.5196 6.43427 14.568 6.54315 14.542C6.64839 14.5159 6.72097 14.4452 6.71008 14.3707C6.69919 14.3 6.60121 14.2516 6.49597 14.2628ZM8.88387 0C3.8504 0 0 3.91929 0 9.08175C0 13.2095 2.53306 16.7417 6.15121 17.9848C6.61573 18.0704 6.77903 17.7764 6.77903 17.5345C6.77903 17.3037 6.76815 16.0308 6.76815 15.2491C6.76815 15.2491 4.22782 15.8074 3.69435 14.14C3.69435 14.14 3.28065 13.0569 2.68548 12.7777C2.68548 12.7777 1.85444 12.1934 2.74355 12.2045C2.74355 12.2045 3.64718 12.279 4.14435 13.1648C4.93911 14.6015 6.27097 14.1884 6.78992 13.9427C6.87339 13.3472 7.10927 12.934 7.37056 12.6884C5.34194 12.4576 3.29516 12.1561 3.29516 8.57555C3.29516 7.55199 3.57097 7.03835 4.15161 6.38328C4.05726 6.14134 3.74879 5.14384 4.24597 3.85602C5.00444 3.61409 6.75 4.86097 6.75 4.86097C7.47581 4.65253 8.25605 4.5446 9.02903 4.5446C9.80202 4.5446 10.5823 4.65253 11.3081 4.86097C11.3081 4.86097 13.0536 3.61037 13.8121 3.85602C14.3093 5.14756 14.0008 6.14134 13.9065 6.38328C14.4871 7.04208 14.8427 7.55571 14.8427 8.57555C14.8427 12.1673 12.7052 12.4539 10.6766 12.6884C11.0105 12.9824 11.2935 13.5407 11.2935 14.4154C11.2935 15.6697 11.2827 17.2218 11.2827 17.527C11.2827 17.769 11.4496 18.063 11.9105 17.9774C15.5395 16.7417 18 13.2095 18 9.08175C18 3.91929 13.9173 0 8.88387 0ZM3.52742 12.8373C3.48024 12.8745 3.49113 12.9601 3.55282 13.0308C3.61089 13.0904 3.69435 13.1164 3.74153 13.068C3.78871 13.0308 3.77782 12.9452 3.71613 12.8745C3.65806 12.8149 3.5746 12.7889 3.52742 12.8373ZM3.13548 12.5358C3.11008 12.5842 3.14637 12.6437 3.21895 12.6809C3.27702 12.7182 3.3496 12.707 3.375 12.6549C3.4004 12.6065 3.36411 12.547 3.29153 12.5097C3.21895 12.4874 3.16089 12.4986 3.13548 12.5358ZM4.31129 13.8608C4.25323 13.9092 4.275 14.0209 4.35847 14.0916C4.44194 14.1772 4.54718 14.1884 4.59435 14.1288C4.64153 14.0804 4.61976 13.9688 4.54718 13.898C4.46734 13.8124 4.35847 13.8013 4.31129 13.8608ZM3.89758 13.3137C3.83952 13.3509 3.83952 13.4477 3.89758 13.5333C3.95565 13.6189 4.05363 13.6561 4.10081 13.6189C4.15887 13.5705 4.15887 13.4737 4.10081 13.3881C4.05 13.3025 3.95565 13.2653 3.89758 13.3137Z"
+                  fill="#333333"
+                />
+              </svg>
+            </a>
+          </span>
+          <span class="social-media-linkind">
+            <a
+              href="https://www.linkedin.com/home?originalSubdomain=pe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="17"
+                height="18"
+                viewBox="0 0 17 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="linkind-dark"
+                  d="M15.7857 0H1.21049C0.542634 0 0 0.582589 0 1.29777V16.7022C0 17.4174 0.542634 18 1.21049 18H15.7857C16.4536 18 17 17.4174 17 16.7022V1.29777C17 0.582589 16.4536 0 15.7857 0ZM5.13795 15.4286H2.6183V6.83839H5.14174V15.4286H5.13795ZM3.87812 5.66518C3.06987 5.66518 2.41719 4.97009 2.41719 4.1183C2.41719 3.26652 3.06987 2.57143 3.87812 2.57143C4.68259 2.57143 5.33906 3.26652 5.33906 4.1183C5.33906 4.97411 4.68638 5.66518 3.87812 5.66518ZM14.5828 15.4286H12.0632V11.25C12.0632 10.2536 12.0442 8.97188 10.754 8.97188C9.44107 8.97188 9.23996 10.0567 9.23996 11.1777V15.4286H6.72031V6.83839H9.1375V8.01161H9.17165C9.50937 7.33661 10.3328 6.62545 11.5585 6.62545C14.1085 6.62545 14.5828 8.40536 14.5828 10.7196V15.4286Z"
+                  fill="#333333"
+                />
+              </svg>
+            </a>
+          </span>
+          <span class="social-media-twitter">
+            <a
+              href="https://twitter.com/?lang=es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="18"
+                height="16"
+                viewBox="0 0 18 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="twitter-dark"
+                  d="M16.1498 3.98749C16.1612 4.16248 16.1612 4.33751 16.1612 4.5125C16.1612 9.84997 12.4493 16 5.66499 16C3.57488 16 1.63326 15.3375 0 14.1875C0.296966 14.225 0.582471 14.2375 0.890863 14.2375C2.61546 14.2375 4.20305 13.6 5.47083 12.5125C3.84899 12.475 2.48985 11.3125 2.02156 9.7125C2.25001 9.74997 2.47842 9.77498 2.71829 9.77498C3.0495 9.77498 3.38074 9.72496 3.6891 9.63751C1.99875 9.26247 0.730936 7.63749 0.730936 5.67499V5.62501C1.22204 5.92501 1.79315 6.11251 2.39844 6.13748C1.40478 5.41247 0.753788 4.17498 0.753788 2.77497C0.753788 2.02499 0.936496 1.33749 1.25631 0.737481C3.07232 3.18748 5.80203 4.78745 8.86293 4.96248C8.80583 4.66248 8.77155 4.35001 8.77155 4.03751C8.77155 1.81248 10.4162 0 12.4607 0C13.5228 0 14.4822 0.487499 15.1561 1.275C15.9898 1.10001 16.7893 0.762491 17.4975 0.300002C17.2233 1.23752 16.6409 2.02502 15.8756 2.52499C16.618 2.43753 17.3376 2.21248 18 1.90001C17.4975 2.69998 16.8693 3.41245 16.1498 3.98749Z"
+                  fill="#333333"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-mobile" id="settingsMobile">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="mobile-setting"
+          d="M17.8499 3.83549C17.7712 3.51803 17.3739 3.41045 17.1426 3.64178L14.5284 6.25599L12.142 5.85837L11.7444 3.47197L14.3586 0.857759C14.5913 0.625025 14.4791 0.228463 14.1596 0.14901C12.4939 -0.263723 10.6598 0.181002 9.35795 1.48248C7.96436 2.87607 7.58081 4.89615 8.16089 6.65747L0.658914 14.1595C-0.219638 15.038 -0.219638 16.4625 0.658914 17.3411C1.53747 18.2196 2.96199 18.2196 3.84055 17.3411L11.3362 9.84544C13.0982 10.4329 15.1144 10.0451 16.5172 8.64239C17.8204 7.33915 18.2644 5.50224 17.8499 3.83549ZM2.25008 16.5937C1.78426 16.5937 1.40633 16.2157 1.40633 15.7499C1.40633 15.2837 1.78426 14.9062 2.25008 14.9062C2.7159 14.9062 3.09383 15.2837 3.09383 15.7499C3.09383 16.2157 2.7159 16.5937 2.25008 16.5937Z"
+          fill="#262626"
+        />
+      </svg>
     </div>
     <div class="window"></div>
     <div class="info-center">
-        <div class="info">
-            <h4 class="info-title">Info</h4>
-            <p class="info-p">Hello, my name is Harvey, I am the creator of this mini productivity application, if you want to make a change that will improve the application, send me a pull request :)</p>
-            <button class="info-btn">ok</button>
+      <div class="info">
+        <div class="quit-info-modal" id="quitModalInfo">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.799805 0.78125L10.7998 10.7049M0.799805 10.7049L10.7998 0.78125"
+              stroke="#747474"
+              stroke-linecap="round"
+            />
+          </svg>
         </div>
+        <h4 class="info-title">INFO</h4>
+        <p class="info-p">
+          Hello, my name is Harvey, I am the creator of this mini productivity
+          application, if you want to make a change that will improve the
+          application, send me a pull request :)
+        </p>
+        <button class="info-btn">ok</button>
+      </div>
     </div>
     <div class="modal-user-name-center">
-        <div class="modal-user-name">
-            <h4 class="modal-user-name-title"  >Enter your name</h4>
-            <input class="modal-user-name-btn modal-user-name-input" id="modal-user-name-input" type="text" placeholder="my-name">
-            <span id="modal-user-name-input-error" class="modal-user-name-input-error"></span>
-            <p class="modal-user-name-text">Your name should not include more than 10 characters and there should be no spaces. Are you want a cup coffee?.</p>
-            <button class="modal-user-name-btn modal-user-name-btn-javascript" id="modal-user-name-modal">save</button>
+      <div class="modal-user-name">
+        <div class="quit-name-modal" id="quitModalName">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.799805 0.78125L10.7998 10.7049M0.799805 10.7049L10.7998 0.78125"
+              stroke="#747474"
+              stroke-linecap="round"
+            />
+          </svg>
         </div>
+        <h4 class="modal-user-name-title">ENTER YOUR NAME</h4>
+        <input
+          class="modal-user-name-btn modal-user-name-input"
+          id="modal-user-name-input"
+          type="text"
+          placeholder="my-name"
+        />
+        <span
+          id="modal-user-name-input-error"
+          class="modal-user-name-input-error"
+        ></span>
+        <p class="modal-user-name-text">
+          Your name should not include more than 10 characters and there should
+          be no spaces. Are you want a cup coffee?.
+        </p>
+        <button
+          class="modal-user-name-btn modal-user-name-btn-javascript"
+          id="modal-user-name-modal"
+        >
+          save
+        </button>
+      </div>
     </div>
-    <div class="modal-setting-center">
-        <div class="modal-setting">
-            <div class="modal-setting-title">
-                <h4 >Settings</h4>
-                <img src="../svg/modal-title-settings.svg" alt="" srcset="">
-            </div>
-            <p class="modal-setting-subtitle">font family</p>
-            <div class="modal-setting-letter">
-                <button class="itim">Itim</button>
-                <button class="lato">Lato</button>
-                <button class="firacode">FiraCode</button>
-                <button class="montserrat">Montserrat</button>
-                <button class="comicneue">Comic Neue</button>
-                <button class="roboto">Roboto</button>
-            </div>
-            <p class="modal-setting-footer">Soon there will be more options,<br/> we are working on it</p>
-        </div>
-    </div>
-    <div class="social-media">
-        <span class="social-media-gitHub">
-            <a href="https://github.com/YerikAH?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <img class="github-dark" src="../svg/github-dark.svg" alt="GitHub" srcset="">
-            </a>
-            <a href="https://github.com/YerikAH?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <img class="github-white" src="../svg/github-white.svg" alt="GitHub" srcset="">
-            </a>
-        </span>
-        <span class="social-media-linkind">
-            <a href="https://www.linkedin.com/home?originalSubdomain=pe" target="_blank" rel="noopener noreferrer">
-                <img class="linkind-dark" src="../svg/lin-dark.svg" alt="Linkeind" srcset="">
-            </a>
-            <a href="https://www.linkedin.com/home?originalSubdomain=pe" target="_blank" rel="noopener noreferrer">
-                <img class="linkind-white" src="../svg/lin-white.svg" alt="Linkeind" srcset="">
-            </a>
-        </span>
-        <span class="social-media-twitter">
-            <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer">
-                <img class="twitter-dark" src="../svg/tw-dark.svg" alt="Twitter" srcset="">
-            </a>
-            <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer">
-                <img class="twitter-white" src="../svg/tw-white.svg" alt="Twitter" srcset="">
-            </a>
-        </span>
+    <div class="social-media" id="socialMediaMinina">
+      <span class="social-media-gitHub">
+        <a
+          href="https://github.com/YerikAH?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="github-dark"
+              d="M6.02056 14.4936C6.02056 14.568 5.9371 14.6276 5.83185 14.6276C5.7121 14.6387 5.62863 14.5792 5.62863 14.4936C5.62863 14.4191 5.7121 14.3596 5.81734 14.3596C5.92621 14.3484 6.02056 14.408 6.02056 14.4936ZM4.89194 14.3261C4.86653 14.4005 4.93911 14.4861 5.04798 14.5085C5.14234 14.5457 5.25121 14.5085 5.27298 14.434C5.29476 14.3596 5.22581 14.274 5.11694 14.2405C5.02258 14.2144 4.91734 14.2516 4.89194 14.3261ZM6.49597 14.2628C6.39073 14.2889 6.31814 14.3596 6.32903 14.4452C6.33992 14.5196 6.43427 14.568 6.54315 14.542C6.64839 14.5159 6.72097 14.4452 6.71008 14.3707C6.69919 14.3 6.60121 14.2516 6.49597 14.2628ZM8.88387 0C3.8504 0 0 3.91929 0 9.08175C0 13.2095 2.53306 16.7417 6.15121 17.9848C6.61573 18.0704 6.77903 17.7764 6.77903 17.5345C6.77903 17.3037 6.76815 16.0308 6.76815 15.2491C6.76815 15.2491 4.22782 15.8074 3.69435 14.14C3.69435 14.14 3.28065 13.0569 2.68548 12.7777C2.68548 12.7777 1.85444 12.1934 2.74355 12.2045C2.74355 12.2045 3.64718 12.279 4.14435 13.1648C4.93911 14.6015 6.27097 14.1884 6.78992 13.9427C6.87339 13.3472 7.10927 12.934 7.37056 12.6884C5.34194 12.4576 3.29516 12.1561 3.29516 8.57555C3.29516 7.55199 3.57097 7.03835 4.15161 6.38328C4.05726 6.14134 3.74879 5.14384 4.24597 3.85602C5.00444 3.61409 6.75 4.86097 6.75 4.86097C7.47581 4.65253 8.25605 4.5446 9.02903 4.5446C9.80202 4.5446 10.5823 4.65253 11.3081 4.86097C11.3081 4.86097 13.0536 3.61037 13.8121 3.85602C14.3093 5.14756 14.0008 6.14134 13.9065 6.38328C14.4871 7.04208 14.8427 7.55571 14.8427 8.57555C14.8427 12.1673 12.7052 12.4539 10.6766 12.6884C11.0105 12.9824 11.2935 13.5407 11.2935 14.4154C11.2935 15.6697 11.2827 17.2218 11.2827 17.527C11.2827 17.769 11.4496 18.063 11.9105 17.9774C15.5395 16.7417 18 13.2095 18 9.08175C18 3.91929 13.9173 0 8.88387 0ZM3.52742 12.8373C3.48024 12.8745 3.49113 12.9601 3.55282 13.0308C3.61089 13.0904 3.69435 13.1164 3.74153 13.068C3.78871 13.0308 3.77782 12.9452 3.71613 12.8745C3.65806 12.8149 3.5746 12.7889 3.52742 12.8373ZM3.13548 12.5358C3.11008 12.5842 3.14637 12.6437 3.21895 12.6809C3.27702 12.7182 3.3496 12.707 3.375 12.6549C3.4004 12.6065 3.36411 12.547 3.29153 12.5097C3.21895 12.4874 3.16089 12.4986 3.13548 12.5358ZM4.31129 13.8608C4.25323 13.9092 4.275 14.0209 4.35847 14.0916C4.44194 14.1772 4.54718 14.1884 4.59435 14.1288C4.64153 14.0804 4.61976 13.9688 4.54718 13.898C4.46734 13.8124 4.35847 13.8013 4.31129 13.8608ZM3.89758 13.3137C3.83952 13.3509 3.83952 13.4477 3.89758 13.5333C3.95565 13.6189 4.05363 13.6561 4.10081 13.6189C4.15887 13.5705 4.15887 13.4737 4.10081 13.3881C4.05 13.3025 3.95565 13.2653 3.89758 13.3137Z"
+              fill="#333333"
+            />
+          </svg>
+        </a>
+      </span>
+      <span class="social-media-linkind">
+        <a
+          href="https://www.linkedin.com/home?originalSubdomain=pe"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="17"
+            height="18"
+            viewBox="0 0 17 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="linkind-dark"
+              d="M15.7857 0H1.21049C0.542634 0 0 0.582589 0 1.29777V16.7022C0 17.4174 0.542634 18 1.21049 18H15.7857C16.4536 18 17 17.4174 17 16.7022V1.29777C17 0.582589 16.4536 0 15.7857 0ZM5.13795 15.4286H2.6183V6.83839H5.14174V15.4286H5.13795ZM3.87812 5.66518C3.06987 5.66518 2.41719 4.97009 2.41719 4.1183C2.41719 3.26652 3.06987 2.57143 3.87812 2.57143C4.68259 2.57143 5.33906 3.26652 5.33906 4.1183C5.33906 4.97411 4.68638 5.66518 3.87812 5.66518ZM14.5828 15.4286H12.0632V11.25C12.0632 10.2536 12.0442 8.97188 10.754 8.97188C9.44107 8.97188 9.23996 10.0567 9.23996 11.1777V15.4286H6.72031V6.83839H9.1375V8.01161H9.17165C9.50937 7.33661 10.3328 6.62545 11.5585 6.62545C14.1085 6.62545 14.5828 8.40536 14.5828 10.7196V15.4286Z"
+              fill="#333333"
+            />
+          </svg>
+        </a>
+      </span>
+      <span class="social-media-twitter">
+        <a
+          href="https://twitter.com/?lang=es"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="18"
+            height="16"
+            viewBox="0 0 18 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="twitter-dark"
+              d="M16.1498 3.98749C16.1612 4.16248 16.1612 4.33751 16.1612 4.5125C16.1612 9.84997 12.4493 16 5.66499 16C3.57488 16 1.63326 15.3375 0 14.1875C0.296966 14.225 0.582471 14.2375 0.890863 14.2375C2.61546 14.2375 4.20305 13.6 5.47083 12.5125C3.84899 12.475 2.48985 11.3125 2.02156 9.7125C2.25001 9.74997 2.47842 9.77498 2.71829 9.77498C3.0495 9.77498 3.38074 9.72496 3.6891 9.63751C1.99875 9.26247 0.730936 7.63749 0.730936 5.67499V5.62501C1.22204 5.92501 1.79315 6.11251 2.39844 6.13748C1.40478 5.41247 0.753788 4.17498 0.753788 2.77497C0.753788 2.02499 0.936496 1.33749 1.25631 0.737481C3.07232 3.18748 5.80203 4.78745 8.86293 4.96248C8.80583 4.66248 8.77155 4.35001 8.77155 4.03751C8.77155 1.81248 10.4162 0 12.4607 0C13.5228 0 14.4822 0.487499 15.1561 1.275C15.9898 1.10001 16.7893 0.762491 17.4975 0.300002C17.2233 1.23752 16.6409 2.02502 15.8756 2.52499C16.618 2.43753 17.3376 2.21248 18 1.90001C17.4975 2.69998 16.8693 3.41245 16.1498 3.98749Z"
+              fill="#333333"
+            />
+          </svg>
+        </a>
+      </span>
     </div>
     <div class="btn-dark-mode" id="darkMode">
-        <span class="moon">
-            <img src="../svg/moon.svg" alt="">
-        </span>
-        <span class="sun off">
-            <img src="../svg/sun.svg" alt="">
-        </span>
+      <span class="moon">
+        <svg
+          width="16"
+          height="18"
+          viewBox="0 0 16 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.95147 18C11.7125 18 14.2342 16.737 15.9048 14.6675C16.152 14.3613 15.8825 13.9141 15.5006 13.9872C11.1576 14.8188 7.16932 11.4709 7.16932 7.06303C7.16932 4.52398 8.5212 2.18914 10.7184 0.931992C11.0571 0.738211 10.9719 0.221941 10.587 0.150469C10.0475 0.0504468 9.50007 8.21369e-05 8.95147 0C4.01036 0 0 4.02578 0 9C0 13.9679 4.00407 18 8.95147 18Z"
+            fill="#333333"
+          />
+        </svg>
+      </span>
+      <span class="sun off">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.00044 5.625C7.14058 5.625 5.62527 7.14023 5.62527 9C5.62527 10.8598 7.14058 12.375 9.00044 12.375C10.8603 12.375 12.3756 10.8598 12.3756 9C12.3756 7.14023 10.8603 5.625 9.00044 5.625ZM17.6634 8.45508L14.3339 6.79219L15.5117 3.2625C15.6699 2.78438 15.2164 2.33086 14.7417 2.49258L11.2119 3.67031L9.54539 0.3375C9.32037 -0.1125 8.6805 -0.1125 8.45549 0.3375L6.79252 3.6668L3.25914 2.48906C2.78099 2.33086 2.32746 2.78437 2.48918 3.25898L3.66698 6.78867L0.337516 8.45508C-0.112505 8.68008 -0.112505 9.31992 0.337516 9.54492L3.66698 11.2078L2.48918 14.741C2.33097 15.2191 2.78451 15.6727 3.25914 15.5109L6.789 14.3332L8.45197 17.6625C8.67698 18.1125 9.31686 18.1125 9.54187 17.6625L11.2048 14.3332L14.7347 15.5109C15.2128 15.6691 15.6664 15.2156 15.5047 14.741L14.3269 11.2113L17.6563 9.54844C18.1134 9.31992 18.1134 8.68008 17.6634 8.45508ZM12.1822 12.1816C10.4278 13.9359 7.57302 13.9359 5.81864 12.1816C4.06426 10.4273 4.06426 7.57266 5.81864 5.81836C7.57302 4.06406 10.4278 4.06406 12.1822 5.81836C13.9366 7.57266 13.9366 10.4273 12.1822 12.1816Z"
+            fill="#FFFFFF"
+          />
+        </svg>
+      </span>
     </div>
     <p class="name" id="tools-user-name"></p>
-    <div class="tools-user">
-        <span class="tools-user-user" id="tools-user-user">
-            <img class="tools-user-dark" src="../svg/user-dark.svg" alt="">
-            <img class="tools-user-white" src="../svg/user-white.svg" alt="">
-        </span>
-        <span class="tools-user-setting" id="tools-user-setting">
-            <img class="tools-user-dark" src="../svg/settings-dark.svg" alt="">
-            <img class="tools-user-white" src="../svg/settings-white.svg" alt="">
-        </span>
-        <span class="tools-user-info" id="tools-user-info">
-            <img class="tools-user-dark" src="../svg/info-dark.svg" alt="">
-            <img class="tools-user-white" src="../svg/info-white.svg" alt="">
-        </span>
+    <div class="tools-user" id="toolsUser">
+      <span class="tools-user-user" id="tools-user-user">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="tools-user-dark"
+            d="M9 0C4.02823 0 0 4.02823 0 9C0 13.9718 4.02823 18 9 18C13.9718 18 18 13.9718 18 9C18 4.02823 13.9718 0 9 0ZM9 3.48387C10.7637 3.48387 12.1935 4.91371 12.1935 6.67742C12.1935 8.44113 10.7637 9.87097 9 9.87097C7.23629 9.87097 5.80645 8.44113 5.80645 6.67742C5.80645 4.91371 7.23629 3.48387 9 3.48387ZM9 15.9677C6.86976 15.9677 4.96089 15.0024 3.68347 13.4927C4.36573 12.2081 5.70121 11.3226 7.25806 11.3226C7.34516 11.3226 7.43226 11.3371 7.51573 11.3625C7.9875 11.5149 8.48105 11.6129 9 11.6129C9.51895 11.6129 10.0161 11.5149 10.4843 11.3625C10.5677 11.3371 10.6548 11.3226 10.7419 11.3226C12.2988 11.3226 13.6343 12.2081 14.3165 13.4927C13.0391 15.0024 11.1302 15.9677 9 15.9677Z"
+            fill="#333333"
+          />
+        </svg>
+      </span>
+      <span class="tools-user-setting" id="settingsDesk">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="tools-user-dark"
+            d="M17.8499 3.83549C17.7712 3.51803 17.3739 3.41045 17.1426 3.64178L14.5284 6.25599L12.142 5.85837L11.7444 3.47197L14.3586 0.857759C14.5913 0.625025 14.4791 0.228463 14.1596 0.14901C12.4939 -0.263723 10.6598 0.181002 9.35795 1.48248C7.96436 2.87607 7.58081 4.89615 8.16089 6.65747L0.658914 14.1595C-0.219638 15.038 -0.219638 16.4625 0.658914 17.3411C1.53747 18.2196 2.96199 18.2196 3.84055 17.3411L11.3362 9.84544C13.0982 10.4329 15.1144 10.0451 16.5172 8.64239C17.8204 7.33915 18.2644 5.50224 17.8499 3.83549V3.83549ZM2.25008 16.5937C1.78426 16.5937 1.40633 16.2157 1.40633 15.7499C1.40633 15.2837 1.78426 14.9062 2.25008 14.9062C2.7159 14.9062 3.09383 15.2837 3.09383 15.7499C3.09383 16.2157 2.7159 16.5937 2.25008 16.5937Z"
+            fill="#333333"
+          />
+        </svg>
+      </span>
+      <span class="tools-user-info" id="tools-user-info">
+        <svg
+          width="8"
+          height="18"
+          viewBox="0 0 8 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="tools-user-dark"
+            d="M0.833333 14.9143H1.66667V9.8357H0.833333C0.373083 9.8357 0 9.52091 0 9.13257V7.45312C0 7.06479 0.373083 6.75 0.833333 6.75H5.5C5.96025 6.75 6.33333 7.06479 6.33333 7.45312V14.9143H7.16667C7.62692 14.9143 8 15.2291 8 15.6174V17.2969C8 17.6852 7.62692 18 7.16667 18H0.833333C0.373083 18 0 17.6852 0 17.2969V15.6174C0 15.2291 0.373083 14.9143 0.833333 14.9143ZM4 0C2.34313 0 1 1.13326 1 2.53125C1 3.92924 2.34313 5.0625 4 5.0625C5.65688 5.0625 7 3.92924 7 2.53125C7 1.13326 5.65683 0 4 0Z"
+            fill="#333333"
+          />
+        </svg>
+      </span>
     </div>
     <nav class="nav">
-        <ul class="nav-ul">
-            <li class="ul-li">
-                <a href="index.html" class="li-a">To do list</a>
-            </li>
-            <li class="ul-li">
-                <a href="pomoApp.html" class="li-a">Pomodoro</a>
-            </li>
-        </ul>
+      <ul class="nav-ul">
+        <li class="ul-li">
+          <a href="index.html" class="li-a">To do list</a>
+        </li>
+        <li class="ul-li">
+          <a href="pomoApp.html" class="li-a">Pomodoro</a>
+        </li>
+      </ul>
     </nav>
+
     <main class="pomo-center">
-        <div class="circle-pomo">
+      <div class="bg-circle-big">
+        <div class="count-circle" id="progresPomo">
+          <div class="circle-pomo">
             <div class="work-pomo">
-                <p class="work-minute" id="min">25</p>
-                <p> : </p>
-                <p class="work-second" id="sec">00</p>
+              <p class="work-minute" id="min">25</p>
+              <p>:</p>
+              <p class="work-second" id="sec">00</p>
             </div>
             <div class="break-pomo">
-                <p class="break-minute" id="min_b">4</p>
-                <p>:</p>
-                <p class="break-second" id="sec_b">59</p>
+              <p class="break-minute" id="min_b">4</p>
+              <p>:</p>
+              <p class="break-second" id="sec_b">59</p>
             </div>
+          </div>
         </div>
-        <div class="cycles-pomo">
-        </div>
-        <div class="config-pomo">
-            <button class="start-pomo" id="start">Get start</button>
-            <button class="Setting-pomo">Setting</button>
-        </div>
+      </div>
+      <div class="cycles-pomo"></div>
+      <div class="config-pomo">
+        <button class="start-pomo" id="start">Get start</button>
+        <button class="continue" id="continue">Continue</button>
+        <button class="stop" id="stop">Stop</button>
+        <button class="reset" id="reset">Reset</button>
+        <button class="Setting-pomo" id="SettingPomodoro">Setting</button>
+      </div>
     </main>
 
-    <footer class="version">
-        <span class="git-version-dark"><img src="../svg/git-dark.svg" alt="" srcset=""></span>
-        <span class="git-version-white"><img src="../svg/git-white.svg" alt="" srcset=""></span>
-        <p class="git-version-text">Version 1.0.1</p>
+    <footer class="version" id="versionFooter">
+      <svg
+        width="10"
+        height="12"
+        viewBox="0 0 10 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="git-version-dark"
+          d="M10 3.375C10 2.33906 9.06771 1.5 7.91667 1.5C6.76563 1.5 5.83333 2.33906 5.83333 3.375C5.83333 4.22813 6.46615 4.94766 7.33073 5.175C7.3151 5.55234 7.22135 5.84297 7.04427 6.03984C6.64323 6.48984 5.76042 6.56484 4.82552 6.64219C4.09115 6.70312 3.33073 6.76875 2.70833 7.03828V3.66328C3.55469 3.42422 4.16667 2.71406 4.16667 1.875C4.16667 0.839062 3.23438 0 2.08333 0C0.932292 0 0 0.839062 0 1.875C0 2.71406 0.611979 3.42422 1.45833 3.66328V8.33437C0.611979 8.57578 0 9.28594 0 10.125C0 11.1609 0.932292 12 2.08333 12C3.23438 12 4.16667 11.1609 4.16667 10.125C4.16667 9.32812 3.61458 8.64609 2.83333 8.37656C2.91406 8.25469 3.03646 8.14687 3.22135 8.0625C3.64323 7.87031 4.27344 7.81875 4.94271 7.7625C6.04167 7.67109 7.28646 7.56562 8.02083 6.74531C8.38542 6.3375 8.57031 5.8125 8.58333 5.15391C9.40625 4.90078 10 4.2 10 3.375ZM2.08333 1.5C2.3125 1.5 2.5 1.66875 2.5 1.875C2.5 2.08125 2.3125 2.25 2.08333 2.25C1.85417 2.25 1.66667 2.08125 1.66667 1.875C1.66667 1.66875 1.85417 1.5 2.08333 1.5ZM2.08333 10.5C1.85417 10.5 1.66667 10.3313 1.66667 10.125C1.66667 9.91875 1.85417 9.75 2.08333 9.75C2.3125 9.75 2.5 9.91875 2.5 10.125C2.5 10.3313 2.3125 10.5 2.08333 10.5ZM7.91667 3C8.14583 3 8.33333 3.16875 8.33333 3.375C8.33333 3.58125 8.14583 3.75 7.91667 3.75C7.6875 3.75 7.5 3.58125 7.5 3.375C7.5 3.16875 7.6875 3 7.91667 3Z"
+          fill="#333333"
+        />
+      </svg>
+      <p class="git-version-text">Version 1.2.0</p>
+    </footer>
+    <footer class="logo-footer" id="logoFooter">
+      <span>
+        <svg
+          width="12"
+          height="11"
+          viewBox="0 0 12 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="logo-foot-svg"
+            d="M3.2721 0.0827219C3.24597 0.0565019 3.21492 0.0356977 3.18074 0.0215024C3.14655 0.00730717 3.1099 0 3.07288 0C3.03586 0 2.99921 0.00730717 2.96503 0.0215024C2.93084 0.0356977 2.89979 0.0565019 2.87366 0.0827219L1.38116 1.56655L0.849129 1.04811C0.823 1.02189 0.791952 1.00109 0.757765 0.986894C0.723579 0.972699 0.686926 0.965392 0.64991 0.965392C0.612893 0.965392 0.576241 0.972699 0.542055 0.986894C0.507868 1.00109 0.47682 1.02189 0.450691 1.04811L0.0827219 1.41655C0.0565019 1.44268 0.0356977 1.47373 0.0215024 1.50792C0.00730716 1.5421 0 1.57875 0 1.61577C0 1.65279 0.00730716 1.68944 0.0215024 1.72363C0.0356977 1.75781 0.0565019 1.78886 0.0827219 1.81499L1.19811 2.92593C1.25379 2.97885 1.32767 3.00836 1.40448 3.00836C1.4813 3.00836 1.55517 2.97885 1.61085 2.92593L1.97624 2.55983L3.66843 0.867879C3.72115 0.815113 3.75094 0.743685 3.75134 0.669093C3.75173 0.594501 3.7227 0.522762 3.67054 0.469441L3.2721 0.0827219ZM3.2721 3.81374C3.24597 3.78752 3.21492 3.76672 3.18074 3.75252C3.14655 3.73833 3.1099 3.73102 3.07288 3.73102C3.03586 3.73102 2.99921 3.73833 2.96503 3.75252C2.93084 3.76672 2.89979 3.78752 2.87366 3.81374L1.38116 5.30718L0.849129 4.78921C0.823 4.76299 0.791952 4.74219 0.757765 4.72799C0.723579 4.7138 0.686926 4.70649 0.64991 4.70649C0.612893 4.70649 0.576241 4.7138 0.542055 4.72799C0.507868 4.74219 0.47682 4.76299 0.450691 4.78921L0.0827219 5.15695C0.0565019 5.18307 0.0356977 5.21412 0.0215024 5.24831C0.00730716 5.2825 0 5.31915 0 5.35616C0 5.39318 0.00730716 5.42983 0.0215024 5.46402C0.0356977 5.49821 0.0565019 5.52925 0.0827219 5.55538L1.1953 6.66867C1.25094 6.72157 1.32478 6.75108 1.40155 6.75108C1.47833 6.75108 1.55217 6.72157 1.6078 6.66867L1.97577 6.30093L3.66796 4.60827C3.72048 4.55588 3.75017 4.48485 3.75057 4.41066C3.75096 4.33647 3.72203 4.26513 3.67007 4.21218L3.2721 3.81374ZM1.49999 7.8757C0.879129 7.8757 0.36116 8.37961 0.36116 9.0007C0.36116 9.62179 0.879598 10.1257 1.49999 10.1257C1.79836 10.1257 2.08451 10.0072 2.29549 9.7962C2.50646 9.58522 2.62499 9.29907 2.62499 9.0007C2.62499 8.70233 2.50646 8.41618 2.29549 8.2052C2.08451 7.99422 1.79836 7.8757 1.49999 7.8757ZM11.625 8.2507H4.87499C4.77554 8.2507 4.68015 8.29021 4.60983 8.36053C4.5395 8.43086 4.49999 8.52624 4.49999 8.6257V9.3757C4.49999 9.47516 4.5395 9.57054 4.60983 9.64087C4.68015 9.71119 4.77554 9.7507 4.87499 9.7507H11.625C11.7245 9.7507 11.8198 9.71119 11.8902 9.64087C11.9605 9.57054 12 9.47516 12 9.3757V8.6257C12 8.52624 11.9605 8.43086 11.8902 8.36053C11.8198 8.29021 11.7245 8.2507 11.625 8.2507ZM11.625 0.750691H4.87499C4.77554 0.750691 4.68015 0.7902 4.60983 0.860527C4.5395 0.930853 4.49999 1.02624 4.49999 1.12569V1.87569C4.49999 1.97515 4.5395 2.07053 4.60983 2.14086C4.68015 2.21118 4.77554 2.25069 4.87499 2.25069H11.625C11.7245 2.25069 11.8198 2.21118 11.8902 2.14086C11.9605 2.07053 12 1.97515 12 1.87569V1.12569C12 1.02624 11.9605 0.930853 11.8902 0.860527C11.8198 0.7902 11.7245 0.750691 11.625 0.750691ZM11.625 4.5007H4.87499C4.77554 4.5007 4.68015 4.5402 4.60983 4.61053C4.5395 4.68086 4.49999 4.77624 4.49999 4.8757V5.6257C4.49999 5.72515 4.5395 5.82054 4.60983 5.89086C4.68015 5.96119 4.77554 6.0007 4.87499 6.0007H11.625C11.7245 6.0007 11.8198 5.96119 11.8902 5.89086C11.9605 5.82054 12 5.72515 12 5.6257V4.8757C12 4.77624 11.9605 4.68086 11.8902 4.61053C11.8198 4.5402 11.7245 4.5007 11.625 4.5007Z"
+            fill="#F9F9F9"
+          />
+        </svg>
+      </span>
+      my-task-app
     </footer>
     <script src="../src/pomoIndex.js" type="module"></script>
-</body>
+  </body>
 </html>

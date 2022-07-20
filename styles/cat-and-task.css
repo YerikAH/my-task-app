@@ -1,70 +1,66 @@
-.no-task{
-    display: grid;
-    justify-content: center;
-    margin-top: 20vh;
-    text-align: center;
+.no-task {
+  display: grid;
+  justify-content: center;
+  margin-top: 20vh;
+  text-align: center;
 }
-.no-taskk{
-    display:none;
+.no-taskk {
+  display: none;
 }
 
 /* task */
-.tasks_ul{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
+.tasks_ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.lista_task{
-    background-color: var(--black);
-    list-style: none;
-    width: 70%;
-    display: flex;
-    border-radius: 30px;
-    padding:10px 30px;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    align-items: center;
-    color:var(--white);
+.lista_task {
+  background-color: var(--black);
+  list-style: none;
+  width: 70%;
+  display: flex;
+  border-radius: 30px;
+  padding: 10px 30px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  align-items: center;
+  color: var(--white);
 }
 
-.lista_task span:hover{
-    transition: 0.7s;
-    cursor: pointer;
+.lista_task span:hover {
+  transition: 0.7s;
+  cursor: pointer;
 }
-@media (min-width:810px){
-    .lista_task{
-        width:40%;
-    }
+@media (min-width: 810px) {
+  .lista_task {
+    width: 40%;
+  }
 }
 /*error*/
-.list_tasks{
-    margin-top: 170px;
+.list_tasks {
+  margin-top: 170px;
 }
-.second{
-    margin-top: -66px;
-    margin-bottom: -80px;
-    text-align: center;
-    font-size: 0.7rem;
+.second {
+  margin-top: -66px;
+  margin-bottom: -80px;
+  text-align: center;
+  font-size: 0.7rem;
 }
 .second p {
-    color: var(--black);
+  color: var(--error);
 }
-.delete-white{
-    display: none;
+.no-task-text {
+  margin-top: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+  letter-spacing: 2px;
+  line-height: 40px;
+  max-width: 400px;
 }
-.delete-dark{
-    display: block;
-}
-.no-task-text{
-    margin-top: 30px;
-    font-size: 1rem;
-    font-weight: 500;
-    color:var(--black);
-    letter-spacing:2px;
-}
-.no-task img{
-    padding-left: 30px;
+.no-task img {
+  padding-left: 30px;
 }

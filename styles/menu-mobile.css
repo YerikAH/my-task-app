@@ -1,0 +1,231 @@
+.menu-title-mobile {
+  border-bottom: 1px solid var(--gris-look);
+}
+.menu-title-mobile h4 {
+  font-family: var(--family);
+  font-size: 20px;
+  color: var(--black);
+  margin: 0.5rem 0;
+}
+.sub-title-mobile {
+  margin: 0.5rem 0;
+  font-weight: 700;
+  font-family: var(--family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  color: var(--gris-look);
+}
+.menu-all-mobile {
+  max-width: 500px;
+  position: fixed;
+  width: 100vw;
+  left: -300vw;
+  z-index: 1000;
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  transition: 0.3s;
+  height: 100vh;
+  overflow: auto;
+}
+.grid-option {
+  display: grid;
+  grid-template-columns: auto 60px;
+  place-items: center;
+  gap: 15px;
+  margin: 2rem 0px;
+}
+.grid-option-seccion-one span {
+  color: var(--black);
+  font-size: 11px;
+}
+.grid-option-seccion-two {
+  width: 100%;
+  display: grid;
+  height: 100%;
+  grid-template-rows: 20px 20px;
+  align-content: center;
+  gap: 15px;
+}
+.grid-option-seccion-two button {
+  max-width: 60px;
+  width: 100%;
+  border-radius: 255px;
+  border: none;
+  font-family: var(--family);
+  height: 25px;
+  background: var(--gris);
+  font-size: 11px;
+  color: var(--black);
+}
+.font-change-mobile button {
+  border: none;
+  outline: none;
+  background: var(--gris);
+  color: var(--black);
+  border-radius: 50px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 11px;
+
+  width: 100%;
+}
+.font-change-mobile {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 20px;
+  place-content: center;
+  margin: 2rem 0;
+}
+.special-font-mobile {
+  margin: 2rem 0 0 0;
+}
+.grid-child-info {
+  margin-bottom: 2rem;
+}
+.grid-child-info span {
+  font-size: 11px;
+  color: var(--black);
+}
+.grid-child-name input[type="text"] {
+  width: 100%;
+  border-radius: 255px;
+  border: none;
+  font-family: var(--family);
+  height: 35px;
+  background: var(--gris);
+  font-size: 11px;
+  color: var(--black);
+  margin: 1rem 0;
+  padding: 0 1rem;
+  font-weight: 700;
+}
+.grid-child-name input[type="submit"] {
+  width: 100%;
+  border-radius: 255px;
+  border: none;
+  font-family: var(--family);
+  height: 35px;
+  background: var(--gris);
+  font-size: 11px;
+  color: var(--black);
+  padding: 0 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.grid-child-name span {
+  font-size: 11px;
+  color: var(--black);
+}
+.itim {
+  font-family: "Itim", cursive;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.lato {
+  font-family: "Lato", sans-serif;
+}
+.firacode {
+  font-family: "Fira Code", monospace;
+}
+.comicneue {
+  font-family: "Comic Neue", cursive;
+}
+.logo-footer-mobile span {
+  border-radius: 255px;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  background-color: var(--black);
+  margin-right: 10px;
+}
+.logo-footer-mobile {
+  display: flex;
+  font-size: 12px;
+  color: var(--black);
+  align-items: center;
+}
+.grid-child-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 0 0;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid var(--gris-look);
+}
+.social-media-mobile span {
+  margin: 0 1rem 0 0;
+}
+.social-media-mobile span > a {
+  text-decoration: none;
+}
+.quit-menu-mobile {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  margin: 1rem 2rem;
+  cursor: pointer;
+}
+.grid-child-name input[type="submit"]:hover {
+  filter: invert(90%);
+  transition: 0.3s;
+}
+@media (min-width: 400px) {
+  .font-change-mobile {
+    grid-template-columns: repeat(3, 100px);
+  }
+  .font-change-mobile button {
+    font-size: 12px;
+  }
+  .grid-option {
+    grid-template-columns: auto 140px;
+  }
+  .grid-option-seccion-two {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 810px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+#nameMobilError {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--error);
+}
+.name-mobile-span::before {
+  content: "/ ";
+}
+@media (min-width: 810px) {
+  .grid-child-info {
+    display: none;
+  }
+  .grid-child-name {
+    display: none;
+  }
+  .dark-mode-minimalist {
+    display: none;
+  }
+  .grid-child-footer {
+    position: absolute;
+    width: 87%;
+    bottom: 1rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .grid-child-footer {
+    position: static;
+    width: 100%;
+  }
+}

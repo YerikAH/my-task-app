@@ -1,68 +1,94 @@
-.break-pomo{
+.break-pomo {
   opacity: 0;
   position: absolute;
   display: flex;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 /*copy the work pomo in break pomo*/
-.pomo-center{
+.pomo-center {
   width: 100vw;
   height: 80vh;
   display: grid;
   place-items: center;
   margin-top: 50px;
+  place-content: center;
 }
-
-.circle-pomo{
+.bg-circle-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--gris);
+}
+.count-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 285px;
+  height: 285px;
+  border-radius: 50%;
+  /* background: conic-gradient(var(--black) 45%, transparent 0); */
+}
+/*small*/
+.circle-pomo {
   color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 310px;
-  height: 310px;
-  border: 5px solid var(--black);
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
+  background: var(--gris);
 }
-.work-pomo{
+.work-pomo {
   display: flex;
-  font-size: 5rem;
-  
+  font-size: 4rem;
 }
-.config-pomo{
+.config-pomo {
   display: grid;
+  margin-top: 3rem;
 }
-.config-pomo button{
+.config-pomo button {
   padding: 10px 40px;
   outline: none;
   font-family: var(--family);
   border-radius: 50px;
   background: transparent;
-  border: 2px solid var(--black);
   margin: 10px;
   color: var(--black);
+  background-color: var(--gris);
   cursor: pointer;
+  border: none;
+  letter-spacing: 0.15em;
 }
-.config-pomo button:hover{
-  background-color: var(--black);
-  color:var(--white);
-  transition: 0.5s;
-}
-@media (min-width:350px){
-  .circle-pomo{
-    width: 360px;
-    height: 360px;
-  }
+.config-pomo button:hover {
+  filter: invert(100%);
+  transition: 0.3s;
 }
 
-.cycles-pomo{
+.cycles-pomo {
   display: flex;
   justify-content: center;
 }
 
-.cycle-pomo-pomo{
+.cycle-pomo-pomo {
   border-radius: 50px;
   width: 10px;
   height: 10px;
   border: 1px solid var(--black);
   margin-left: 5px;
+}
+.button-time-pomodoro {
+  font-family: var(--family);
+}
+.reset {
+  display: none;
+}
+.continue {
+  display: none;
+}
+.stop {
+  display: none;
 }

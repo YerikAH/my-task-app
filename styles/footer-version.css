@@ -1,26 +1,45 @@
-.version{
-    display: none;
+.version {
+  display: none;
+}
+.logo-footer {
+  display: none;
 }
 
-@media(min-width:810px){
-    .version{
-        display: block;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        margin: 0px 20px 20px 0px; 
-    }
-    .git-version-white{
-        display: none;
-    }
-    .version span {
-        margin-right: 5px;
-    }
-    .git-version-text{
-        color: var(--black);
-        font-size: 0.7rem;
-        letter-spacing: 0.5px;
-    }
+@media (min-width: 810px) {
+  .version {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px 20px 0px;
+  }
+  .git-version-text {
+    color: var(--black);
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    margin-left: 10px;
+  }
+  /*logo footer*/
+  .logo-footer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
+    font-size: 12px;
+    color: var(--black);
+  }
+  .logo-footer span {
+    border-radius: 255px;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    background-color: var(--black);
+    margin-right: 10px;
+  }
 }

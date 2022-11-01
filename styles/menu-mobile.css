@@ -36,6 +36,7 @@
   place-items: center;
   gap: 15px;
   margin: 2rem 0px;
+  justify-content: space-between;
 }
 .grid-option-seccion-one span {
   color: var(--black);
